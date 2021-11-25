@@ -1,0 +1,76 @@
+# Project: pzl
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o showchapters.o chapter1.o death.o chapter2v1.o chapter2v2.o chapter3v1.o ending1.o happy.o ending2.o chapter3v2.o ending3.o ending4.o chapter3v3.o ending5.o chapter3v4.o ending6.o
+LINKOBJ  = main.o showchapters.o chapter1.o death.o chapter2v1.o chapter2v2.o chapter3v1.o ending1.o happy.o ending2.o chapter3v2.o ending3.o ending4.o chapter3v3.o ending5.o chapter3v4.o ending6.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = justwork.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+showchapters.o: showchapters.c
+	$(CC) -c showchapters.c -o showchapters.o $(CFLAGS)
+
+chapter1.o: chapter1.c
+	$(CC) -c chapter1.c -o chapter1.o $(CFLAGS)
+
+death.o: death.c
+	$(CC) -c death.c -o death.o $(CFLAGS)
+
+chapter2v1.o: chapter2v1.c
+	$(CC) -c chapter2v1.c -o chapter2v1.o $(CFLAGS)
+
+chapter2v2.o: chapter2v2.c
+	$(CC) -c chapter2v2.c -o chapter2v2.o $(CFLAGS)
+
+chapter3v1.o: chapter3v1.c
+	$(CC) -c chapter3v1.c -o chapter3v1.o $(CFLAGS)
+
+ending1.o: ending1.c
+	$(CC) -c ending1.c -o ending1.o $(CFLAGS)
+
+happy.o: happy.c
+	$(CC) -c happy.c -o happy.o $(CFLAGS)
+
+ending2.o: ending2.c
+	$(CC) -c ending2.c -o ending2.o $(CFLAGS)
+
+chapter3v2.o: chapter3v2.c
+	$(CC) -c chapter3v2.c -o chapter3v2.o $(CFLAGS)
+
+ending3.o: ending3.c
+	$(CC) -c ending3.c -o ending3.o $(CFLAGS)
+
+ending4.o: ending4.c
+	$(CC) -c ending4.c -o ending4.o $(CFLAGS)
+
+chapter3v3.o: chapter3v3.c
+	$(CC) -c chapter3v3.c -o chapter3v3.o $(CFLAGS)
+
+ending5.o: ending5.c
+	$(CC) -c ending5.c -o ending5.o $(CFLAGS)
+
+chapter3v4.o: chapter3v4.c
+	$(CC) -c chapter3v4.c -o chapter3v4.o $(CFLAGS)
+
+ending6.o: ending6.c
+	$(CC) -c ending6.c -o ending6.o $(CFLAGS)
